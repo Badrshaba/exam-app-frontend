@@ -9,7 +9,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "flower.elevateegy.com",
+        hostname: "exam.elevateegy.com",
         port: "",
         pathname: "/uploads/**",
         search: "",

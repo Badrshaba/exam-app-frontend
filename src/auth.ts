@@ -30,8 +30,8 @@ export const authOptions: NextAuthOptions = {
         const payload: APIResponse<LoginResponse> = await response.json();
 
         // If the response contains an error, throw it
-        if ("error_msg" in payload) {
-          throw new Error(payload.error_msg);
+        if ("code" in payload) {
+          throw new Error(payload.message);
         }
 
         return {

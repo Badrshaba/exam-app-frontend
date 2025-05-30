@@ -6,7 +6,7 @@ declare type User = {
 };
 
 declare type LoginResponse = {
-  success: boolean;
+  message: "success";
   token: string;
   user: User;
 };

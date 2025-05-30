@@ -6,17 +6,14 @@ declare module "next-auth" {
   /* The shape of the user object returned in the OAuth providers' `profile` callback,
    * or the second parameter of the `session` callback, when using a database.
    */
-  interface User extends Pick<DatabaseFields, "_id"> {
-    token: string;
+  interface User extends omit<DatabaseFields, "updatedAt"> {
+    username: string;
     firstName: string;
     lastName: string;
     email: string;
-    gender: string;
     phone: string;
-    photo: string | null;
     role: string;
-    wishlist: string[];
-    addresses: string[];
+    isVerified: boolean;
   }
 
   /**

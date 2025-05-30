@@ -9,3 +9,5 @@ declare type MetaData = {
   totalPages: number;
   totalItems: number;
 };
+
+declare type SearchParams = { [key: string]: string | string[] | undefined };

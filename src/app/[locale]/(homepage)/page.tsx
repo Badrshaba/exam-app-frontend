@@ -2,10 +2,12 @@ import { Link } from "@/i18n/routing";
 import { CircleCheckBig, Clock, Flag } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Subject from "./_components/subject";
 
 export default function Page() {
   // Translation
   const t = useTranslations();
+
   return (
     <>
       <section className=" w-full shadow-lg rounded-lg p-2 py-5 mt-2 flex max-[1000px]:flex-col bg-white ">
@@ -61,6 +63,7 @@ export default function Page() {
           <p>{t("quizes")}</p>
           <p>{t("view-all")}</p>
         </div>
+        <Subject />
         <div className=" flex items-center justify-center gap-5 flex-wrap">
           <Link href="/front-end" className=" relative w-[300px] h-[250px] rounded-lg">
             <Image
